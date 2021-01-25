@@ -4,11 +4,11 @@
 package com.bellszhu.elasticsearch.plugin.synonym.analysis;
 
 import org.apache.commons.codec.Charsets;
+import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.apache.lucene.analysis.Analyzer;
 import org.apache.lucene.analysis.synonym.SynonymMap;
 import java.io.StringReader;
-import org.elasticsearch.common.logging.ESLoggerFactory;
 import org.elasticsearch.env.Environment;
 
 import java.io.*;
@@ -20,7 +20,7 @@ import java.nio.file.Path;
  */
 public class LocalSynonymFile implements SynonymFile {
 
-    private static Logger logger = ESLoggerFactory.getLogger("dynamic-synonym");
+    private static Logger logger = LogManager.getLogger("dynamic-synonym");
 
     private String format;
 
